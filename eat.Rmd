@@ -69,5 +69,16 @@ basicCC <- ggplot(dd2,aes(x=race,y=prcnt*100,fill=eatout))
 basicCC + geom_bar(stat="identity" ,position ="dodge")
 ```
 
-
 The left is estimated by count and the right is depicted by %.
+
+```{r}
+table1 <- xtabs(~ race + eatout, data = mydata)
+rowPerc(table1)
+colPerc(table1)
+```
+
+There is a numerical result, the % the top of the graph is white people eating out the most. 70% of black people were eating out and 28 people eat in. other races were charted lowest and black is in the middle and the white people were eating out the most.
+
+
+
+
