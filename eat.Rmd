@@ -52,8 +52,22 @@ barchartGC(~race + eatout,data=mydata, type="percent")
 There was not much difference between the percent eating out from black and other races,the white people were eating out more.
 
 
-```{r}
 
+```{r}
+dd2 <- mydata %>% group_by(race,eatout) %>% summarise(count=n()) %>% mutate(prcnt=count/sum(count))
+
+
+#the group_by followed by summarize(count=n())
+
+basicC <- ggplot(dd2,aes(x=race,y=count,fill=eatout))
+basicC <-geom_bar(stat="identity",postion ="dodge" )
+            
+      
+#Now for percentage plot
+                  
+basicCC <- ggplot(dd2,aes(x=race,y=prcnt*100,fill=eatout))
+basicCC + geom_bar(stat="identity" ,position ="dodge")
 ```
 
 
+The left is estimated by count and the right is depicted by %.
