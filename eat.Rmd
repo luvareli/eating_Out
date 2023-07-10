@@ -93,4 +93,10 @@ fisherXY(mydata$race,mydata$eatout,printAll = TRUE)
 
 The p value of white greater at about 0.05. The p value is lower for black. White and Black have a difference of 2.2 eating out. FisherXY is the analog to Tuki HD. The odds between white and black is 0.4 and 1.49 and 0 is in the middle, these two methods have remote similarities to one another.
 
+#Conclusion
+
+today I incorporated FisherXY and got variables from the stata in GSS/Norc. I saw real data that is updated daily it was an interesting assignment that introduced me to stata,SPSS and SAS from Norc.we used a bar chart,a ggplot,numerical data and fisherXY.I also utilized the Cat_Cat.rmd.
+
+
+
 
