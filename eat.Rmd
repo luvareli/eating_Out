@@ -23,7 +23,7 @@ $H_A$ There is a statistical difference between at least two races with the freq
 
 
 
-```{r include=FALSE,echo=FALSE}
+```{r include=FALSE,warning=FALSE}
 source(file="fisherXY.R")
 require(tidyverse)
 require(tigerstats)
@@ -88,6 +88,9 @@ chisqtestGC(table1)
 there is a low p value .000002287. The chi square statistics is 25.9769
 
 ```{r}
-fisherXY(mydata$race,mydata$eatout)
+fisherXY(mydata$race,mydata$eatout,printAll = TRUE)
 ```
+
+The p value of white greater at about 0.05. The p value is lower for black. White and Black have a difference of 2.2 eating out. FisherXY is the analog to Tuki HD. The odds between white and black is 0.4 and 1.49 and 0 is in the middle, these two methods have remote similarities to one another.
+
 
