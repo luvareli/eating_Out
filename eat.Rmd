@@ -80,5 +80,14 @@ colPerc(table1)
 There is a numerical result, the % the top of the graph is white people eating out the most. 70% of black people were eating out and 28 people eat in. other races were charted lowest and black is in the middle and the white people were eating out the most.
 
 
+```{r}
+chisq.test(table1)
+chisqtestGC(table1)
+```
 
+there is a low p value .000002287. The chi square statistics is 25.9769
+
+```{r}
+fisherXY(mydata$race,mydata$eatout)
+```
 
